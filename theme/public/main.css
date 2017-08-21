@@ -1,0 +1,98 @@
+#title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#title h1 {
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-top: .25rem;
+}
+
+#title>a {
+  color: inherit;
+}
+
+nav#chapters {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+nav#chapters li,
+nav#chapters a {
+  font-size: 11px;
+  color: inherit;
+}
+
+nav#chapters li {
+  margin-bottom: 1.5rem;
+}
+
+nav#chapters a .day,
+nav#chapters a .title {
+  display: block;
+}
+
+nav#chapters .day {
+  font-weight: 200;
+}
+
+nav#chapters .title {
+  font-weight: 600;
+}
+
+nav#sections a {
+  display: block;
+}
+
+.reading-pane {
+  line-height: 1.5;
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reading-pane h1 {
+  margin-bottom: 1rem;
+  font-size: 26px;
+}
+
+.reading-pane h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  color: #4f4f4f;
+}
+
+.reading-pane h3 {
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.reading-pane h4 {
+  margin-top: 3rem;
+  font-size: 16px;
+}
+
+.reading-pane h5 {
+  margin-top: 1.5rem;
+  color: #777;
+  font-size: 16px;
+}
+
+#main {
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  #github-fork {
+    display: none;
+  }
+}

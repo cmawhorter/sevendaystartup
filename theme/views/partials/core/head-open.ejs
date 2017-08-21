@@ -1,0 +1,12 @@
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+<title><%= this.title || page.title || (page['chapter:title'] ? `Chapter ${page['chapter:number']}: ${page['chapter:day']}; ${page['chapter:title']}` : '') %> - Seven Day Startup</title>
+
+<link rel="canonical" href="<%= theme.url(page, true) %>">
+<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<link rel="stylesheet" href="/main.css">

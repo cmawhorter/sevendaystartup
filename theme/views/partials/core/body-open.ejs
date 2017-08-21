@@ -1,0 +1,4 @@
+<%
+var classes = [ 'layout-' + page.layout, 'theme-' + (page.theme || 'default') ];
+%>
+<body <%- page.id ? 'id="page-' + page.id.toString() + '" ' : '' %>class="<%= classes.join(' ') %>">

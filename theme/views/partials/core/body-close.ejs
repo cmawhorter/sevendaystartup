@@ -1,0 +1,10 @@
+<% (page.script_dependency || []).forEach(function(src) {  %>
+<script src="<%= src %>"></script>
+<% }) %>
+<% (page.script || []).forEach(function(src) {  %>
+<script src="<%= src %>"></script>
+<% }) %>
+<% if (env.stage === 'development') { %>
+  <script src="//localhost:<%= livereloadport %>/livereload.js?snipver=1"></script>
+<% } %>
+</body>

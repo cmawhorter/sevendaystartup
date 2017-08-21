@@ -1,0 +1,40 @@
+{
+  "strict": true,
+
+  "data": {
+    "formats": "json,js,yml,yaml,md,markdown,html,txt",
+    "assets": "png,gif,jpg"
+  },
+
+  "env": {
+  },
+
+  "compile": {
+    "resolution": "auto"
+  },
+
+  "build": {
+    "path": "./dist",
+    "extension": "",
+    "destination": "/",
+    "minify": true,
+    "assets": {
+      "path": ".",
+      "destination": "."
+    }
+  },
+
+  "deploy": {
+    "target": ""
+  },
+
+  "cli": {
+    "port": 8000,
+    "content": "content",
+    "assets": "assets",
+    "globals": null,
+    "theme": null,
+    "livereloadport": "auto",
+    "remotecontrol": true
+  }
+}

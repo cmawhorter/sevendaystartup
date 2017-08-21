@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "./scripts/serve.sh"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.4.8",
+    "fancy": "github:cmawhorter/fancy#0.1.0",
+    "string": "^3.3.1"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,60 @@
+<%
+uses('resource', 'toc').as('chapters');
+%>
+<!DOCTYPE html>
+<html lang="en">
+  <% include ../partials/core/head-open %>
+  <meta name="author" content="Cory Mawhorter">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="<%= page['chapter:title'] || page.title %> - Seven Day Startup">
+  <meta property="og:description" content="<%= page.description || '' %>">
+  <meta property="og:url" content="<%= theme.url(page, true) %>">
+  <meta property="og:site_name" content="Seven Day Startup">
+  <meta property="article:publisher" content="https://github.com/cmawhorter">
+  <meta property="article:tag" content="<%= page.keywords || '' %>">
+  <meta property="article:section" content="<%= page['chapter:day'] || '' %>">
+  <meta property="article:published_time" content="<%= page['blog:created'] || new Date().toISOString() %>">
+  <meta property="article:modified_time" content="<%= page['blog:updated'] || new Date().toISOString() %>">
+  <meta property="og:updated_time" content="<%= page['blog:updated'] || new Date().toISOString() %>">
+  <meta name="twitter:description" content="<%= page['blog:description'] || page.description || '' %>">
+  <meta name="twitter:title" content="<%= page['chapter:title'] || page.title %> - Seven Day Startup">
+  <meta name="twitter:site" content="@corymawhorter">
+  <meta name="twitter:creator" content="@corymawhorter">
+
+  <% include ../partials/core/head-close %>
+
+  <% include ../partials/core/body-open %>
+
+  <a id="github-fork" href="https://github.com/cmawhorter/sevendaystartup"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+  <div class="container">
+    <div id="title">
+      <a href="/"><h1>Seven Day Startup</h1></a>
+      <p class="small text-muted">A book by <a class="text-muted" href="/about-author">Cory Mawhorter</a></p>
+    </div>
+
+    <nav id="chapters">
+      <ol class="row list-unstyled">
+        <% chapters.forEach(toc => { %>
+        <li class="col">
+          <a href="<%= theme.url(toc) %>">
+            <span class="day"><%= toc['chapter:day'] %></span>
+            <span class="title"><%= toc['chapter:short_title'] || toc['chapter:title'] %></span>
+          </a>
+        </li>
+        <% }) %>
+      </ol>
+    </nav>
+
+    <main id="main" class="reading-pane">
+      <%- page.body %>
+    </main>
+
+    <div id="footer" class="text-muted small text-center">
+      &copy; <%= new Date().getFullYear() %> <a class="text-muted" href="/about-author">Cory Mawhorter</a>
+    </div>
+  </div>
+
+  <% include ../partials/core/body-close %>
+</html>
